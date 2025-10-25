@@ -10,13 +10,13 @@ type Handler struct {
 
 func NewHandler() *Handler {
 	router := gin.Default()
-	
+
 	h := &Handler{
 		router: router,
 	}
-	
+
 	h.setupRoutes()
-	
+
 	return h
 }
 
