@@ -45,6 +45,7 @@ func NewHandler(
 }
 
 func (h *Handler) registerRoutes() {
+	h.router.POST("/game", h.handleCreateGame)
 	h.router.POST("/sessions", h.handleCreateSession)
 	h.router.POST("/matches", h.handleCreateMatch)
 	h.router.POST("/matches/:matchID/moves", h.handleCreateMove)
